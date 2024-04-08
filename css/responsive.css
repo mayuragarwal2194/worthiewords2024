@@ -1,0 +1,11 @@
+@media (min-width:0) and (max-width: 575px) {
+  .footer-wrapper,
+  .footer-section {
+    text-align: center;
+  }
+
+  .our-designer-left,
+  .our-designer-right{
+    width: 100%;
+  }
+}
