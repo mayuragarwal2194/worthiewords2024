@@ -1,88 +1,16 @@
+<?php 
+  // Template Name: Services Template
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services Page</title>
-  <!-- Goodle Fonts CDN(LATO) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome CDn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Remix Icon CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
-
-  <!-- Slick CDN -->
-  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-
-  <!-- Slick Default Css CDN -->
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  <!-- Local Css -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Responsive Css -->
-  <link rel="stylesheet" href="css/responsive.css">
-</head>
+<?php get_header(); ?>
 
 <body>
   <!-- Header Section -->
   <section class="header-section position-relative">
-    <nav class="w-100" id="nav">
-      <div class="container">
-        <div class="d-flex align-items-center justify-content-between py-4">
-          <div class="logo">
-            <a href="index.html" class="text-decoration-none">
-              <!-- <img src="./images/W.png" class="h-100 w-100" alt=""> -->
-              WORTHIE WORDS
-            </a>
-          </div>
-          <ul class="navs list-unstyled d-flex align-items-center gap-4 mb-0">
-            <li class="nav-items">
-              <a href="index.html" class="text-decoration-none text-white active">
-                Home
-              </a>
-            </li>
-            <li class="nav-items">
-              <a href="/about.html" class="text-decoration-none text-white">
-                About Us
-              </a>
-            </li>
-            <li class="nav-items">
-              <a href="#" class="text-decoration-none text-white">
-                Contact Us
-              </a>
-            </li>
-            <li class="nav-items">
-              <a href="/blog.html" class="text-decoration-none text-white">
-                Blog
-              </a>
-            </li>
-            <li class="nav-items">
-              <a href="./services.html" class="text-decoration-none text-white">
-                Services
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <?php include_once('navbar.php'); ?>
     <div class="hero-banner">
       <div class="service-banner-wrapper">
         <div class="about-overlay d-flex align-items-center justify-content-center text-white text-uppercase">
@@ -400,152 +328,9 @@
     </div>
   </section>
   <!-- Footer Section -->
-  <footer class="footer-section text-start text-lg-start text-creame">
-    <div class="w-100 footer-bg py-5">
-      <div class="container">
-        <div class="row align-items-start">
-          <div class="col-12 col-lg-3">
-            <h5 class="footer-head text-uppercase fw-normal mb-3 footer-collection-head">
-              Newsletter
-            </h5>
-            <p class="footer-detail mt-4 pt-1">
-              Subscribe to receive updates, access to exclusive deals, and more.
-            </p>
-            <div class="footer-email">
-
-            </div>
-            <div class="footer-navs d-flex align-items-center gap-3 mt-3">
-              <div class="share-links d-flex align-items-center gap-3 flex-wrap">
-                <div class="share-link rounded-circle cursor-pointer d-flex align-items-center justify-content-center">
-                  <i class="fa-brands fa-facebook-f"></i>
-                </div>
-                <div class="share-link rounded-circle cursor-pointer d-flex align-items-center justify-content-center">
-                  <i class="fa-brands fa-twitter"></i>
-                </div>
-                <div class="share-link rounded-circle cursor-pointer d-flex align-items-center justify-content-center">
-                  <i class="fa-brands fa-pinterest"></i>
-                </div>
-                <div class="share-link rounded-circle cursor-pointer d-flex align-items-center justify-content-center">
-                  <i class="fa-brands fa-instagram"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3">
-            <div class="footer-wrapper w-100 w-fit mt-4 mt-lg-0">
-              <h5 class="footer-head text-uppercase fw-normal mb-3 footer-collection-head">
-                Shop
-              </h5>
-              <div class="footer-collection">
-                <ul class="text-capitalize list-unstyled mb-0">
-                  <li>
-                    <a href="#" class="text-decoration-none">
-                      Women
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-decoration-none">
-                      Men
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-decoration-none">
-                      Small Leather Goods
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-decoration-none">
-                      Collaboration
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3">
-            <div class="footer-wrapper w-100 w-fit mt-4 mt-lg-0">
-              <h5 class="footer-head text-uppercase fw-normal mb-3">
-                Information
-              </h5>
-              <div class="footer-quick-links">
-                <ul class="ps-0 mb-0">
-                  <li class="list-unstyled underline-hover-effect">
-                    <a href="#" class="text-decoration-none mb-0 pb-0">
-                      Theme Features
-                    </a>
-                  </li>
-                  <li class="list-unstyled underline-hover-effect">
-                    <a href="#" class="text-decoration-none mb-0 pb-0">
-                      About Us
-                    </a>
-                  </li>
-                  <li class="list-unstyled underline-hover-effect">
-                    <a href="#" class="text-decoration-none mb-0 pb-0">
-                      Contact Us
-                    </a>
-                  </li>
-                  <li class="list-unstyled underline-hover-effect">
-                    <a href="#" class="text-decoration-none mb-0 pb-0">
-                      Faq
-                    </a>
-                  </li>
-                  <li class="list-unstyled underline-hover-effect">
-                    <a href="#" class="text-decoration-none mb-0 pb-0">
-                      Maintenance Tips
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3">
-            <div class="mt-4 mt-lg-0">
-              <h5 class="footer-head text-uppercase fw-normal mb-3">
-                About the shop
-              </h5>
-              <ul class="list-unstyled">
-                <li>
-                  The story of Leo and Violette, it's ours. We are Léo
-                  Dominguez & Violette Polchi. Two Parisian lovers sharing
-                  our lives for more than 8 years. Since the early days of our
-                  meeting, we always had the dream to develop a project
-                  together. Here it is!
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <?php get_footer(); ?>
 </body>
 
 </html>
 
-<!-- Default Passive Event(For avoid the warnings) CDN-->
-<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
-
-<!-- JQuery CDN CDN-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- Slick js -->
-<script type="text/javascript" src="slick/slick.min.js"></script>
-
-<!-- Bootstrap 5 Bundle CDN-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<!-- GSAP CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- GSAP ScrollTrigger CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- Our Local Js -->
-<script src="js/script.js"></script>
+<?php include_once('footer-links.php'); ?>
