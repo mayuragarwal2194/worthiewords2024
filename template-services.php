@@ -23,14 +23,20 @@
   <section class="choose-section section-padding">
     <div class="container">
       <div class="section-header text-center mb-5">
-        <h2 class="section-head text-uppercase ">Our Services</h2>
+        <h2 class="section-head text-uppercase ">
+          <?php the_field('services_section_title','1524') ?>
+        </h2>
         <div class="heading-seperator m-auto my-2"></div>
         <h3 class="section-subhead m-auto fw-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec eleifend,
-          sem sed dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.s
+          <?php the_field('services_section_subtitle','1524') ?>
         </h3>
       </div>
       <div class="row row-cols-1 row-cols-md-4 g-4 align-items-start">
+        <?php 
+          if (have_rows('analytic_cards',1524)) {
+            while (have_rows('analytic_cards',1524)) {
+                the_row();
+        ?>
         <div class="col">
           <div class="card h-100 border-0">
             <div class="icon-wrapper m-auto mb-4">
@@ -44,14 +50,21 @@
               </svg>
             </div>
             <div class="card-body text-center p-0">
-              <h5 class="card-title">ANALITICS</h5>
+              <h5 class="card-title">
+                <?php the_sub_field('analytic_card_title','1524') ?>
+              </h5>
               <p class="card-text my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                eleifend, sem sed dictum
+                <?php the_sub_field('analytic_card_description','1524') ?>
               </p>
             </div>
           </div>
         </div>
+        <?php }} ?>
+        <?php 
+          if (have_rows('design_cards',1524)) {
+            while (have_rows('design_cards',1524)) {
+                the_row();
+        ?>
         <div class="col">
           <div class="card h-100 border-0">
             <div class="icon-wrapper m-auto mb-4">
@@ -65,14 +78,21 @@
               </svg>
             </div>
             <div class="card-body text-center p-0">
-              <h5 class="card-title">DESIGN</h5>
+              <h5 class="card-title">
+                <?php the_sub_field('design_card_title','1524') ?>
+              </h5>
               <p class="card-text my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                eleifend, sem sed dictum
+                <?php the_sub_field('design_card_description','1524') ?>
               </p>
             </div>
           </div>
         </div>
+        <?php }} ?>
+        <?php 
+          if (have_rows('consulting_cards',1524)) {
+            while (have_rows('consulting_cards',1524)) {
+                the_row();
+        ?>
         <div class="col">
           <div class="card h-100 border-0">
             <div class="icon-wrapper m-auto mb-4">
@@ -86,14 +106,21 @@
               </svg>
             </div>
             <div class="card-body text-center p-0">
-              <h5 class="card-title">CONSULTING</h5>
+              <h5 class="card-title">
+                <?php the_sub_field('consulting_card_title','1524') ?>
+              </h5>
               <p class="card-text my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                eleifend, sem sed dictum
+                <?php the_sub_field('consulting_card_description','1524') ?>
               </p>
             </div>
           </div>
         </div>
+        <?php }} ?>
+        <?php 
+          if (have_rows('advertising_cards',1524)) {
+            while (have_rows('advertising_cards',1524)) {
+                the_row();
+        ?>
         <div class="col">
           <div class="card h-100 border-0">
             <div class="icon-wrapper m-auto mb-4">
@@ -119,14 +146,16 @@
               </svg>
             </div>
             <div class="card-body text-center p-0">
-              <h5 class="card-title">ADVERTISING</h5>
+              <h5 class="card-title">
+                <?php the_sub_field('advertising_card_title','1524') ?>
+              </h5>
               <p class="card-text my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                eleifend, sem sed dictum
+                <?php the_sub_field('advertising_card_description','1524') ?>
               </p>
             </div>
           </div>
         </div>
+        <?php }} ?>
       </div>
     </div>
   </section>
@@ -148,10 +177,11 @@
                 </svg>
               </div>
               <div class="card-body text-center p-0">
-                <h5 class="card-title">ANALITICS</h5>
+                <h5 class="card-title text-uppercase">
+                  <?php the_field('tr_analytics_card_title','1524') ?>
+                </h5>
                 <p class="card-text my-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                  eleifend, sem sed dictum
+                  <?php the_field('tr_analytics_card_description','1524') ?>
                 </p>
               </div>
             </div>
@@ -169,10 +199,11 @@
                 </svg>
               </div>
               <div class="card-body text-center p-0">
-                <h5 class="card-title">DESIGN</h5>
+                <h5 class="card-title text-uppercase">
+                  <?php the_field('tr_design_card_title','1524') ?>
+                </h5>
                 <p class="card-text my-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                  eleifend, sem sed dictum
+                  <?php the_field('tr_design_card_description','1524') ?>
                 </p>
               </div>
             </div>
@@ -190,10 +221,11 @@
                 </svg>
               </div>
               <div class="card-body text-center p-0">
-                <h5 class="card-title">CONSULTING</h5>
+                <h5 class="card-title text-uppercase">
+                  <?php the_field('tr_consulting_card_title','1524') ?>
+                </h5>
                 <p class="card-text my-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                  eleifend, sem sed dictum
+                  <?php the_field('tr_consulting_card_description','1524') ?>
                 </p>
               </div>
             </div>
@@ -223,10 +255,11 @@
                 </svg>
               </div>
               <div class="card-body text-center p-0">
-                <h5 class="card-title">ADVERTISING</h5>
+                <h5 class="card-title text-uppercase">
+                  <?php the_field('tr_advertising_card_title','1524') ?>
+                </h5>
                 <p class="card-text my-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                  eleifend, sem sed dictum
+                  <?php the_field('tr_advertising_card_description','1524') ?>
                 </p>
               </div>
             </div>
@@ -239,7 +272,9 @@
   <section class="choose-section section-padding">
     <div class="container">
       <div class="section-header text-center mb-5">
-        <h2 class="section-head text-uppercase">Why choose us</h2>
+        <h2 class="section-head text-uppercase">
+          <?php the_field('why_section_head','1524') ?>
+        </h2>
       </div>
       <div class="row row-cols-1 row-cols-md-4 g-4 align-items-start">
         <div class="col">
@@ -252,10 +287,11 @@
               </svg>
             </div>
             <div class="card-body text-center p-0">
-              <h5 class="card-title">MULTI-PURPOSE</h5>
+              <h5 class="card-title">
+                <?php the_field('why_purpose_card_title','1524') ?>
+              </h5>
               <p class="card-text my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                eleifend, sem sed dictum
+                <?php the_field('why_purpose_card_description','1524') ?>
               </p>
             </div>
           </div>
@@ -269,10 +305,11 @@
               </svg>
             </div>
             <div class="card-body text-center p-0">
-              <h5 class="card-title">CODER FRIENDLY</h5>
+              <h5 class="card-title">
+                <?php the_field('why_friendly_card_title','1524') ?>
+              </h5>
               <p class="card-text my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                eleifend, sem sed dictum
+                <?php the_field('why_friendly_card_description','1524') ?>
               </p>
             </div>
           </div>
@@ -287,10 +324,11 @@
               </svg>
             </div>
             <div class="card-body text-center p-0">
-              <h5 class="card-title">GOOD READABILITY</h5>
+              <h5 class="card-title">
+                <?php the_field('why_readability_card_title','1524') ?>
+              </h5>
               <p class="card-text my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                eleifend, sem sed dictum
+                <?php the_field('why_readability_card_description','1524') ?>
               </p>
             </div>
           </div>
@@ -305,10 +343,11 @@
               </svg>
             </div>
             <div class="card-body text-center p-0">
-              <h5 class="card-title">EASY TO USE</h5>
+              <h5 class="card-title">
+                <?php the_field('why_use_card_title','1524') ?>
+              </h5>
               <p class="card-text my-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                eleifend, sem sed dictum
+                <?php the_field('why_use_card_description','1524') ?>
               </p>
             </div>
           </div>
@@ -321,7 +360,9 @@
     <div class="about-overlay text-white">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
-          <p class="text-uppercase mb-0">SHARE YOUR PASSION WITH THE WORLD!</p>
+          <p class="text-uppercase mb-0">
+            <?php the_field('services_share_section_title','1524') ?>
+          </p>
           <button class="text-uppercase text-white worthie-btn-fill">Get started</button>
         </div>
       </div>
