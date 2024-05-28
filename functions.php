@@ -13,6 +13,20 @@
     )
   );
 
+  register_sidebar(
+    array(
+      'name'=> 'Footer Menus',
+      'id'=> 'footer_menus'
+    )
+  );
+
+  register_sidebar(
+    array(
+      'name'=> 'Footer Categories Menus',
+      'id'=> 'footer_categories_menus'
+    )
+  );
+
   function my_custom_theme_enqueue_elementor_css() {
       // Enqueue Elementor styles
       if ( did_action( 'elementor/loaded' ) ) {

@@ -39,69 +39,12 @@
         </div>
         <div class="col-12 col-lg-3">
           <div class="footer-wrapper w-100 w-fit mt-4 mt-lg-0">
-            <h5 class="footer-head text-uppercase fw-normal mb-3 footer-collection-head">
-              Shop
-            </h5>
-            <div class="footer-collection">
-              <ul class="text-capitalize list-unstyled mb-0">
-                <li>
-                  <a href="#" class="text-decoration-none">
-                    Women
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-decoration-none">
-                    Men
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-decoration-none">
-                    Small Leather Goods
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-decoration-none">
-                    Collaboration
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <?php dynamic_sidebar('footer_categories_menus') ?>
           </div>
         </div>
         <div class="col-12 col-lg-3">
           <div class="footer-wrapper w-100 w-fit mt-4 mt-lg-0">
-            <h5 class="footer-head text-uppercase fw-normal mb-3">
-              Information
-            </h5>
-            <div class="footer-quick-links">
-              <ul class="ps-0 mb-0">
-                <li class="list-unstyled underline-hover-effect">
-                  <a href="#" class="text-decoration-none mb-0 pb-0">
-                    Theme Features
-                  </a>
-                </li>
-                <li class="list-unstyled underline-hover-effect">
-                  <a href="#" class="text-decoration-none mb-0 pb-0">
-                    About Us
-                  </a>
-                </li>
-                <li class="list-unstyled underline-hover-effect">
-                  <a href="#" class="text-decoration-none mb-0 pb-0">
-                    Contact Us
-                  </a>
-                </li>
-                <li class="list-unstyled underline-hover-effect">
-                  <a href="#" class="text-decoration-none mb-0 pb-0">
-                    Faq
-                  </a>
-                </li>
-                <li class="list-unstyled underline-hover-effect">
-                  <a href="#" class="text-decoration-none mb-0 pb-0">
-                    Maintenance Tips
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <?php dynamic_sidebar('footer_menus') ?>
           </div>
         </div>
         <div class="col-12 col-lg-3">

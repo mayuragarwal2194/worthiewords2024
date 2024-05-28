@@ -1,4 +1,4 @@
-<div class="blog-sidebar">
+<!-- <div class="blog-sidebar">
   <h4 class="sidebar-head">Popular Posts</h4>
   <div class="sidebar-blog-card d-flex align-items-center gap-3 mb-3">
     <div class="sidebar-card-image">
@@ -69,7 +69,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <div class="blog-sidebar-links">
   <?php dynamic_sidebar('sidebar'); ?>
 </div>
