@@ -35,6 +35,7 @@
   --large-letter-spacing: 2.8px;
 
   /* Colors */
+  --green: #1bae70;
   --text-white: #fff;
   --text-black: #000000;
   --text-black3: #333333;
@@ -46,12 +47,12 @@
   --coconut-creame: #F9FAFB;
 
   /* Section Spacing */
-	--section-padding-desktop: 36px 0;
+  --section-padding-desktop: 36px 0;
 
-	/* Buttons Border Radius */
-	--ff-btn-rounded: 4px;
-	--ff-btn-rounded-circle: 100%;
-	--ff-btn-pill: 50%;
+  /* Buttons Border Radius */
+  --ff-btn-rounded: 4px;
+  --ff-btn-rounded-circle: 100%;
+  --ff-btn-pill: 50%;
 }
 
 * {
@@ -65,6 +66,10 @@
   height: 100vh;
 }
 
+.bg-orange{
+  background-color: var(--text-orange) !important;
+}
+
 .section-padding {
   padding: var(--section-padding-desktop);
 }
@@ -74,6 +79,7 @@ body {
   height: 100%;
   width: 100%;
   color: var(--icons-black5);
+  margin-top: 0 !important;
 }
 
 .main {
@@ -136,15 +142,46 @@ nav .logo img {
   object-fit: cover;
 }
 
-nav .navs .nav-items a {
+nav .navs li {
+  position: relative;
+}
+
+.sub-menu li a{
+  color: #000000 !important;
+}
+
+nav .navs li a {
+  text-decoration: none;
+  color: #fff;
   transition: all ease 0.2s;
 }
 
-nav .navs .nav-items a:hover {
+nav .navs li a:hover {
   color: var(--text-orange) !important;
 }
 
+nav .navs li:hover>.sub-menu {
+  opacity: 1;
+}
+
+nav .navs li>.sub-menu {
+  list-style: none;
+  background: #fff;
+  padding: 8px 36px 8px 8px !important;
+  /* border: 1px solid gray; */
+  transition: all ease 0.2s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
 .navs .active {
+  color: var(--text-orange) !important;
+}
+
+.navs .current_page_item a,
+.navs .current_page_parent a {
   color: var(--text-orange) !important;
 }
 
@@ -266,18 +303,16 @@ nav .navs .nav-items a:hover {
   color: var(--icons-black5);
 }
 
-.our-mission-section a, 
-.worthie-btn-fill
-{
+.our-mission-section a,
+.worthie-btn-fill {
   padding: 8px 32px;
   border: 1px solid black;
   background-color: var(--text-black);
   transition: all ease 0.2s;
 }
 
-.our-mission-section a:hover, 
-.worthie-btn-fill:hover
-{
+.our-mission-section a:hover,
+.worthie-btn-fill:hover {
   color: var(--text-black) !important;
   background-color: transparent;
 }
@@ -435,6 +470,7 @@ nav .navs .nav-items a:hover {
 
 .team-image-wrapper {
   height: 382px;
+  max-width: 254px;
 }
 
 /* Css for Team section- END */
@@ -461,6 +497,9 @@ nav .navs .nav-items a:hover {
 
 .blog-section .card-title {
   color: var(--text-black3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .blog-section .slick-track {
@@ -506,12 +545,36 @@ nav .navs .nav-items a:hover {
 
 .blog-section .blog-cards-wrapper a img {
   transition: all ease 0.8s;
+  max-height: 277px;
+  object-fit: cover;
 }
 
 .blog-section .blog-cards-wrapper a:hover img {
   transform: scale(1.1);
 }
 
+.blog-section .blog-cards-wrapper .blog-excerpt p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wp-pagenavi {
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* 
+.wp-pagenavi .pages{
+  margin-right: 24px;
+}
+
+.wp-pagenavi .nextpostslink{
+  margin-left: 24px;
+} */
 /* Css for blog section- END */
 
 /* Css for Feedback Section */
@@ -630,20 +693,37 @@ nav .navs .nav-items a:hover {
   height: 60px;
 }
 
-.sidebar-blog-title{
+.sidebar-blog-title {
   font-size: var(--large-font-size);
   font-weight: var(--large-font-weight);
 }
 
-.sidebar-blog-date{
+.sidebar-blog-date {
   color: var(--text-black7);
   font-size: var(--small-font-size);
 }
 
+.blog-sidebar-links ul{
+  padding-left: 12px;
+}
+
+.blog-sidebar-links li{
+  list-style: none;
+}
+
+.blog-sidebar-links li a{
+  text-decoration: none;
+  color: var(--icons-black5);
+  transition: all ease 0.2s;
+}
+
+.blog-sidebar-links li a:hover{
+  color: var(--text-orange);
+}
+
 /* Css for About Us Page */
 
-.about-banner-wrapper,
-.service-banner-wrapper
+.about-banner-wrapper
 {
   height: 100vh;
   max-height: 470px;
@@ -654,13 +734,13 @@ nav .navs .nav-items a:hover {
   background-position: center;
 }
 
-.about-overlay{
+.about-overlay {
   width: 100%;
   height: 100%;
   background: rgba(7, 9, 21, 0.5);
 }
 
-.aboutus-section p{
+.aboutus-section p {
   font-size: var(--paragraph-font-size);
   font-family: var(--paragraph-font-family);
   font-weight: var(--paragraph-font-weight);
@@ -668,7 +748,7 @@ nav .navs .nav-items a:hover {
   line-height: var(--paragraph-line-height);
 }
 
-.sign-art{
+.sign-art {
   color: var(--icons-black4);
   font-family: 'Caveat';
   font-size: 30px;
@@ -678,7 +758,7 @@ nav .navs .nav-items a:hover {
 .aboutus-slider,
 .aboutus-slider .slick-list,
 .aboutus-slider .slider-item,
-.aboutus-slider .slider-item img{
+.aboutus-slider .slider-item img {
   width: 457px !important;
 }
 
@@ -686,28 +766,27 @@ nav .navs .nav-items a:hover {
   transform: translateY(-40px);
 }
 
-.aboutus-slider .slick-dots li button:before{
+.aboutus-slider .slick-dots li button:before {
   font-size: 14px;
 }
 
 /* Css for Facts Section */
-.facts-section{
+.facts-section {
   background: url('../images/facts.jpg')fixed no-repeat;
   background-size: cover;
 }
 
 .facts-section .about-overlay,
-.share-section .about-overlay
-{
+.share-section .about-overlay {
   padding: 80px 0;
 }
 
-.facts-section .counter{
+.facts-section .counter {
   font-size: 50px;
   font-weight: lighter;
 }
 
-.facts-section .counter-title{
+.facts-section .counter-title {
   font-size: var(--large-font-size);
   font-weight: bold;
   letter-spacing: var(--large-letter-spacing);
@@ -715,51 +794,51 @@ nav .navs .nav-items a:hover {
 }
 
 /* Css for choose section */
-.choose-section .card i{
+.choose-section .card i {
   font-size: 80px;
   line-height: normal;
 }
 
 /* Css for share section */
-.share-section{
+.share-section {
   background: url('../images/share.jpg')fixed no-repeat;
   background-size: cover;
 }
 
-.share-section p{
+.share-section p {
   font-size: 24px;
   font-weight: 600;
   letter-spacing: var(--large-letter-spacing);
   line-height: normal;
 }
 
-.share-section button{
+.share-section button {
   background-color: var(--text-black);
   border: 1px solid var(--text-black);
 }
 
-.share-section .worthie-btn-fill{
+.share-section .worthie-btn-fill {
   font-size: var(--small-font-size);
   font-family: var(--small-font-family);
   letter-spacing: var(--small-letter-spacing);
   padding: 8px 16px !important;
 }
 
-.share-section .worthie-btn-fill:hover{
+.share-section .worthie-btn-fill:hover {
   color: white !important;
   border-color: white !important;
 }
 
 /* Css for Leaders Section */
-.leaders-wrapper{
+.leaders-wrapper {
   color: var(--text-black3);
 }
 
-.leaders-wrapper h6{
+.leaders-wrapper h6 {
   font-size: var(--large-font-size);
 }
 
-.leaders-wrapper .card-title{
+.leaders-wrapper .card-title {
   font-family: 'caveat';
   font-size: 30px;
   font-weight: lighter;
@@ -768,11 +847,83 @@ nav .navs .nav-items a:hover {
 }
 
 /* Css for services page */
-.service-banner-wrapper{
+.service-banner-wrapper {
+  height: 100vh;
+  max-height: 470px;
+  width: 100%;
   background: url('../images/service.jpg') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.service-facts-section{
+.service-facts-section {
   background: url('../images/service-facts.jpg')fixed no-repeat;
   background-size: cover;
+}
+
+/* Css for page.php */
+.default-featured-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Css For Comment Form */
+.comment-section .comment-form label {
+  display: block;
+}
+
+.comment-section .comment-form label[for="wp-comment-cookies-consent"] {
+  display: inline-block;
+}
+
+.comment-section .comment-form input,
+.comment-section .comment-form textarea {
+  width: 100%;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.comment-section .comment-form textarea {
+  height: 130px;
+}
+
+.comment-section #submit {
+  width: fit-content;
+  color: #fff;
+  padding: 8px 32px;
+  border: 1px solid black;
+  background-color: var(--text-black);
+  transition: all ease 0.2s;
+}
+
+.comment-section #submit:hover {
+  color: var(--text-black) !important;
+  background-color: transparent;
+}
+
+.comment-section .comment-form input[type="checkbox"] {
+  width: fit-content;
+}
+
+/* Css for contact us page */
+.contact-banner-wrapper{
+  height: 100vh;
+  max-height: 470px;
+  width: 100%;
+  background: url('../images/contact.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-left{
+  top: 36px;
+}
+
+.contact-left ul{
+  border-top: 1px solid #eee;
 }
