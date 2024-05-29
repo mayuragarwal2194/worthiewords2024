@@ -74,7 +74,8 @@
               <div class="container">
                 <div class="comment-wrapper w-75 m-auto">
                   <?php/* comment_form();*/ ?>
-                  <?php comments_template(); ?>
+                  <?php/* comments_template();*/ ?>
+                  <?php the_field('contact_us_form','1499') ?>
                 </div>
               </div>
             </section>
