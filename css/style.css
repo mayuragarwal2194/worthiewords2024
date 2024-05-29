@@ -567,7 +567,7 @@ nav .navs li>.sub-menu {
   gap: 20px;
 }
 
-.blog-detail-section .blog-sidebar-links h2{
+.blog-detail-section .blog-sidebar-links h2 {
   font-size: 24px;
 }
 
@@ -577,19 +577,19 @@ nav .navs li>.sub-menu {
   object-fit: cover;
 }
 
-.blog-detail-section .blog-sidebar-links .wp-block-latest-posts.wp-block-latest-posts__list{
+.blog-detail-section .blog-sidebar-links .wp-block-latest-posts.wp-block-latest-posts__list {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.blog-detail-section .blog-sidebar-links .wp-block-latest-posts.wp-block-latest-posts__list time{
+.blog-detail-section .blog-sidebar-links .wp-block-latest-posts.wp-block-latest-posts__list time {
   color: var(--text-black7);
   font-size: var(--small-font-size);
 }
 
 .blog-detail-section .wp-block-latest-posts__post-title {
-  max-width: 50%;  
+  max-width: 50%;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -706,11 +706,11 @@ nav .navs li>.sub-menu {
   color: var(--text-orange);
 }
 
-.footer-navs li a i{
+.footer-navs li a i {
   transition: all ease 0.2s;
 }
 
-.footer-navs li a:hover i{
+.footer-navs li a:hover i {
   color: var(--text-orange);
 }
 
@@ -718,24 +718,24 @@ nav .navs li>.sub-menu {
   margin: auto;
 }
 
-.footer-wrapper li{
+.footer-wrapper li {
   list-style: none;
 }
 
-.footer-wrapper li h2{
+.footer-wrapper li h2 {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 16px;
   margin-bottom: 1rem;
 }
 
-.footer-wrapper ul{
+.footer-wrapper ul {
   padding-left: 0;
 }
 
 .footer-wrapper .wp-block-categories-list li a,
 .footer-wrapper #menu-footer-menu li,
-.footer-wrapper #menu-footer-menu li a{
+.footer-wrapper #menu-footer-menu li a {
   text-decoration: none;
   font-size: 14px;
   transition: all ease 0.2s;
@@ -939,6 +939,23 @@ nav .navs li>.sub-menu {
   display: block;
 }
 
+.comment-wrapper label {
+  display: block;
+}
+
+.comment-wrapper input,
+.comment-wrapper textarea {
+  width: 100%;
+  color: #212529;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.comment-wrapper textarea {
+  height: 130px;
+}
+
 .comment-section .comment-form label[for="wp-comment-cookies-consent"] {
   display: inline-block;
 }
@@ -956,7 +973,8 @@ nav .navs li>.sub-menu {
   height: 130px;
 }
 
-.comment-section #submit {
+.comment-section #submit,
+.comment-wrapper input[type=submit] {
   width: fit-content;
   color: #fff;
   padding: 8px 32px;
@@ -965,7 +983,8 @@ nav .navs li>.sub-menu {
   transition: all ease 0.2s;
 }
 
-.comment-section #submit:hover {
+.comment-section #submit:hover,
+.comment-wrapper input[type=submit]:hover {
   color: var(--text-black) !important;
   background-color: transparent;
 }
